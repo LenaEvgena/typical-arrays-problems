@@ -1,6 +1,6 @@
 
 exports.min = function min (array) {
-  if (!array.isArray(array) && array.length !== 0) {
+  if (!Array.isArray(array) || !array.length) {
     return 0;
   } else {
     var minResult = array[0];
@@ -14,7 +14,7 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  if (!array.isArray(array) && array.length !== 0) {
+  if (!Array.isArray(array) || !array.length) {
     return 0;
   } else {
     var maxResult = array[0];
