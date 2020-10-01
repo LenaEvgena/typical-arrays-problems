@@ -28,5 +28,14 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (!Array.isArray(array) || !array.length) {
+    return 0;
+  } else {
+    var sum = 0;
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    average = sum / array.length;
+  }
+  return average;
 }
